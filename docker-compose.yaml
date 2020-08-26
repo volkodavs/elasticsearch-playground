@@ -51,7 +51,7 @@ services:
     volumes:
       - data03-es:/usr/share/elasticsearch/data
 
-  elastic-importer:
+  es-importer:
     build: ./elasticsearch-importer
     container_name: elastic-dump-importer
     entrypoint: ./scripts/entrypoint.sh
