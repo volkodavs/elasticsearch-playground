@@ -44,7 +44,6 @@ docker-compose up
 Search for the two Nobel laureates John  Goodenough and  M. Stanley Whittingham
 
 ```bash 
-
 curl --location --request GET 'http://localhost:9200/nobel/_search' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -78,6 +77,11 @@ curl --location --request GET 'http://localhost:9200/nobel/_search' \
                         "query": {
                             "bool": {
                                 "must": [
+                                     {
+                                        "match": {
+                                            "laureates.firstname": "M. Stanley"
+                                        }
+                                    },
                                     {
                                         "match": {
                                             "laureates.surname": "Whittingham"
