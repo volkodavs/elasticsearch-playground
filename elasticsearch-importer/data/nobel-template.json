@@ -1,0 +1,18 @@
+{
+  "mappings": {
+    "properties": {
+      "year": { "type": "integer"},
+      "category": {"type": "text"},
+      "laureates": {
+        "type": "nested", 
+        "properties" : {
+          "id": {"type": "long"},
+          "firstname": {"type": "text"},
+          "surname": {"type": "text"},
+          "motivation": {"type": "text"},
+          "share": {"type": "text"}
+        }
+      }
+    }
+  }
+}
