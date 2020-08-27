@@ -31,6 +31,12 @@ docker-compose up
 **NOTE** 
 By default, a fresh new cluster created
 
+## Requirements 
+
+To run this project you should install: 
+* docker 
+* docker-compose 
+
 # Elasticsearch Mapping 
 
 ## Nobel mapping 
