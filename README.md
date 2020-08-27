@@ -1,8 +1,19 @@
 # Elasticsearch Playground
 
-## Overview 
+## Overvierw 
 
-### Mapping template 
+This project starts 3 node elasticsearch cluster and load test dataset with Nobel laureates for playground purposes. 
+
+## How to start 
+
+```bash
+docker-compose up
+```
+
+
+# Elasticsearch Mapping 
+
+## Explicit mapping 
 
 ```json
 {
@@ -25,23 +36,11 @@
 }
 ```
 
-## Configuration 
-
-3 elasticsearch data nodes 
-1 elastic-importer
-
-## Installation 
-
-```bash
-docker-compose up
-```
-
-
 # Query examples 
 
 ### Nested query 
 
-Search for the two Nobel laureates John  Goodenough and  M. Stanley Whittingham
+Search for the two Nobel laureates John Goodenough and  M. Stanley Whittingham
 
 ```bash 
 curl --location --request GET 'http://localhost:9200/nobel/_search' \
