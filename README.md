@@ -13,7 +13,7 @@ docker-compose up
 
 # Elasticsearch Mapping 
 
-## Explicit mapping 
+## Nobel mapping 
 
 ```json
 {
