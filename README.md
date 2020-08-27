@@ -2,14 +2,34 @@
 
 ## Overvierw 
 
-This project starts 3 node elasticsearch cluster and load test dataset with Nobel laureates for playground purposes. 
+This project starts 3 node elasticsearch cluster with Nobel laureates dataset. 
+
+```json 
+{
+  "year": "2019",
+  "category": "chemistry",
+  "laureates": [
+    {
+      "id": "976",
+      "firstname": "John",
+      "surname": "Goodenough",
+      "motivation": "for the development of lithium-ion batteries",
+      "share": "3"
+    },
+    
+    ...
+    
+    ]
+ }
+```
 
 ## How to start 
 
 ```bash
 docker-compose up
 ```
-
+**NOTE** 
+By default, a fresh new cluster created
 
 # Elasticsearch Mapping 
 
