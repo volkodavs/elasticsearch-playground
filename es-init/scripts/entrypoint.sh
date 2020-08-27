@@ -12,27 +12,8 @@ echo Delete index mapping
 curl --location --request DELETE 'http://es01:9200/nobel'
 
 echo 
-echo Create index mapping 
-curl --location --request PUT 'http://es01:9200/nobel' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "mappings": {
-    "properties": {
-      "year": { "type": "integer"},
-      "category": {"type": "text"},
-      "laureates": {
-        "type": "nested", 
-        "properties" : {
-          "id": {"type": "long"},
-          "firstname": {"type": "text"},
-          "surname": {"type": "text"},
-          "motivation": {"type": "text"},
-          "share": {"type": "text"}
-        }
-      }
-    }
-  }
-}'
+echo Create nobel index mapping 
+curl --location --request PUT 'http://es01:9200/nobel' --header 'Content-Type: application/json' -d @data/nobel-template.json
 
 echo 
 echo import data 
