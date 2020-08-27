@@ -1,4 +1,4 @@
-from taskrabbit/elasticsearch-dump
+FROM taskrabbit/elasticsearch-dump
 
 RUN apk add curl
 
